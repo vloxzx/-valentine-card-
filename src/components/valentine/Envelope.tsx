@@ -48,16 +48,22 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
           className="absolute z-30"
           animate={isOpen ? { opacity: 0, scale: 0 } : { opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
+          style={{ width: '120px', height: '120px' }}
         >
           <div 
-            className="w-24 h-24 md:w-28 md:h-28 rounded-full shadow-2xl flex items-center justify-center"
             style={{
+              width: '120px',
+              height: '120px',
+              borderRadius: '50%',
               background: 'linear-gradient(135deg, #c62828 0%, #d32f2f 50%, #b71c1c 100%)',
-              border: '4px solid #8b0000',
-              boxShadow: '0 8px 24px rgba(139, 0, 0, 0.5)'
+              border: '5px solid #8b0000',
+              boxShadow: '0 8px 24px rgba(139, 0, 0, 0.5)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
-            <svg viewBox="0 0 24 24" className="w-12 h-12 md:w-16 md:h-16" fill="#ffcdd2">
+            <svg viewBox="0 0 24 24" style={{ width: '60px', height: '60px' }} fill="#ffcdd2">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
           </div>
